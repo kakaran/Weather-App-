@@ -112,6 +112,8 @@ p{
     margin: 0;
 }
 
+/* footer css */
+
 footer{
     background-color: #1b2328;
     text-align: center;
@@ -119,4 +121,100 @@ footer{
     color: white;
     font-size: 2rem;
     margin-top: auto;
+}
+
+/* Weather Page css */
+
+.weather_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    gap: 40px;
+
+}
+
+.searchbar{
+    border: 1px solid black;
+    border-radius:30px ;
+    width: 40rem;
+    /* padding: 1.5rem; */
+    display: flex;
+    justify-content: space-between;
+    background-color: #1b2328;
+}
+
+.searchbar input{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    width: 29rem;
+}
+input:focus{
+    outline: none;
+}
+::placeholder{
+    color: #fff;
+}
+.searchbar button{
+    padding: 20px 25px;
+    color: #00b4d8;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.searchbar button:active{
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.resultbox
+{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 250px;
+    background-color: #303340;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.date_time
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+    background-color: #292c39;
+    border-radius: 20px 20px 0px 0px ;
+}
+
+.weather_detail p{
+    font-size: 20px;
+    align-items: right;
+    padding: 20px 20px 0px 6px;
+    color: #a2a5b0;
+}
+
+.temp{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 15px 0px 8px ;
+}
+
+#weathervisiblty{
+    visibility: hidden;
+}
+
+.temp p{
+    color: #fff;
+    font-size: 30px ;
+    align-items: center;
+    justify-content: center;
+}
+
+.temp i{
+    font-size: 70px;
 }

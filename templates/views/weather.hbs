@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {{>header}}
 </head>
+
 <body>
     {{>navbar}}
     <div class="weather_container">
         <div class="searchbar">
-            
+            <input type="text" id="city_name" placeholder="Enter your city name.." autocomplete="none">
+            <button id="submitbtn">Search</button>
         </div>
         <div class="resultbox">
-
+            <div class="date_time">
+                <p id="day">day</p>
+                <p id="date">date</p>
+            </div>
+            <div class="weather_detail">
+                <p id="city_name_print">Get output here</p>
+                <div class="temp" id="weathervisiblty">
+                    <p id="temp">temp</p>
+                    <span id='weather'><i class="fa-solid fa-cloud"></i>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
     {{>footer}}
+    <script src="js/setting.js"></script>
 </body>
+
 </html>

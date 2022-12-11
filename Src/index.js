@@ -3,7 +3,7 @@ const path = require('path');
 const hbs = require('hbs');
 const app = express();
 
-const port = 8000;
+const PORT = process.env.PORT || 8000;
 
 const public = path.join(__dirname,"../public");
 const partials_dir = path.join(__dirname,"../templates/partials");
@@ -31,6 +31,6 @@ app.get("*",(req,res)=>{
 
 
 
-app.listen(port, (err)=>{
+app.listen(PORT, (err)=>{
     err ? console.log(err) : console.log(`Server Start Sucessfully port no is ${port}`)
 })

@@ -10,7 +10,6 @@ let time = '';
 
 const apicall = async () => {
   let citynmaevalue = cityname.value;
-
   if (citynmaevalue == "") {
     citynameprint.innerHTML = "Plz write the name before search";
   } else {

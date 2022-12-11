@@ -65,7 +65,7 @@ color: #00b4d8;
 {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* height: 100vh; */
     align-items: center;
 }
@@ -76,7 +76,6 @@ color: #00b4d8;
 }
 
 .info_home p{
-
     font-size: 1.8rem;
     color: gray;
 }
@@ -90,21 +89,23 @@ color: #00b4d8;
     color: #00b4d8;
 }
 
-.info_home button{
+.button{
     padding: 10px 18px;
+    border: none;
     border-radius: 10px;
     background-color : #eeeeee;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;     */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 150px;
+    font-size: 12px;
 }
 
-.slider,.carouselExampleFade{
+.slider,#carouselExampleFade{
     width: 595px;
     height: 595px;
 }
 
 .carousel-item img{
-
     width: 595px;
     height: 595px;
 }
@@ -124,15 +125,14 @@ footer{
 }
 
 /* Weather Page css */
-
 .weather_container{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3rem;
     gap: 40px;
-
 }
+
 
 .searchbar{
     border: 1px solid black;
@@ -210,11 +210,57 @@ input:focus{
 
 .temp p{
     color: #fff;
-    font-size: 30px ;
+    font-size: 40px ;
     align-items: center;
     justify-content: center;
 }
 
 .temp i{
     font-size: 70px;
+}
+
+/* 404 page css */
+
+.errorpage_Container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorpage_Container img{
+    background-size: cover;
+    height: 70vh;
+}
+
+
+@media (max-width : 950px){
+
+    .hero_container{
+        /* gap: 20px; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info_home{
+        padding: 40px 0px;
+    }
+
+    .info_home h1{
+        color: black;
+        font-size: 2rem;
+    }
+
+    .slider,#carouselExampleFade{
+        width: 395px;
+        height: 395px;
+    }
+    
+    .carousel-item img{
+        width: 395px;
+        height: 395px;
+    }
+
 }

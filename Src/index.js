@@ -22,8 +22,11 @@ app.get('/', (req,res) =>{
 app.get('/weather', (req,res) =>{
     res.render("weather");
 })
-app.get('/about', (req,res) =>{
-    res.render("about");
+// app.get('/about', (req,res) =>{
+//     res.render("about");
+// })
+app.get("*",(req,res)=>{
+    res.render("404")
 })
 
 

@@ -5,7 +5,8 @@ let citynameprint = document.getElementById("city_name_print");
 let submit = document.getElementById("submitbtn");
 let temp = document.getElementById("temp");
 let weather = document.getElementById("weather");
-let visibilty = document.getElementById('weathervisiblty');
+let visibilty = document.getElementById("weathervisiblty");
+let time = '';
 
 const apicall = async () => {
   let citynmaevalue = cityname.value;
@@ -15,18 +16,22 @@ const apicall = async () => {
   } else {
     let API = `http://api.openweathermap.org/data/2.5/weather?q=${citynmaevalue}&units=metric&APPID=39c5728a5e1d4d8ee880d367a6b62b1a`;
     let data = await fetch(API);
-    visibilty.style.visibility = "visible" 
+    visibilty.style.visibility = "visible";
     let jsondata = await data.json();
     citynameprint.innerHTML = `${jsondata.name},${jsondata.sys.country}`;
-    temp.innerHTML = jsondata.main.temp;
+    temp.innerHTML = `${jsondata.main.temp} <sup>o</sup>C`;
     weatherdata = jsondata.weather[0].main;
-    console.log(weatherdata)
+    console.log(weatherdata);
     if (weatherdata == "Clear") {
-      weather.innerHTML =
-        '<i class="fa-solid fa-sun" style ="color: #eccc68"></i>';
+      if (time > 18 || time < 5) {
+        weather.innerHTML ='<i class="fa-solid fa-moon"></i>';
+      } else {
+        weather.innerHTML =
+          '<i class="fa-solid fa-sun" style ="color: #eccc68"></i>';
+      }
     } else if (weatherdata == "Clouds") {
       weather.innerHTML =
-        '<i class="fa-duotone fa-clouds" style = "color : #f1f2f6"></i>';
+        '<i class="fa-solid fa-cloud" style="colot:#f1f2f6"></i>';
     } else if (weatherdata == "Rain") {
       weather.innerHTML =
         '<i class="fa-solid fa-cloud-rain" style = "color : #a4b0be"></i>';
@@ -75,7 +80,8 @@ const gettodayday = () => {
   let getMonth = todaydate.getMonth();
   let today_month = months[getMonth];
   //parse the date and month//
-  date.innerHTML = `${getDate} ${today_month}`;
+  date.innerHTML = `${getDate} ${today_month}  `;
+  time = todaydate.getHours();
 };
 submit.addEventListener("click", apicall);
 gettodayday();

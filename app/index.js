@@ -10,8 +10,8 @@ const partials_dir = path.join(__dirname,"../templates/partials");
 const view_dir = path.join(__dirname,"../templates/views");
 // console.log(view_dir);
 
-app.set('view engine', 'hbs');
 app.use(express.static(public));
+app.set('view engine', 'hbs');
 app.set("views", view_dir);
 hbs.registerPartials(partials_dir);
 

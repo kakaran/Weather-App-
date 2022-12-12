@@ -32,5 +32,5 @@ app.get("*",(req,res)=>{
 
 
 app.listen(PORT, (err)=>{
-    err ? console.log(err) : console.log(`Server Start Sucessfully port no is ${port}`)
+    err ? console.log(err) : console.log(`Server Start Sucessfully port no is ${PORT}`)
 })
